@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  color: white;
+}
+
+.start-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.start-panel label {
+  padding: 20px;
+  font-size: 26px;
+}
+
+select {
+  width: 100%;
+  overflow: hidden;
+  border: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: rgb(239 239 239);
+}
+
+select:focus {
+  outline: none;
+}
+
+optgroup {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-left: 15px;
+  border-bottom: 0.5px solid rgb(145, 145, 145);
+  background: rgb(201, 201, 201);
+  font-weight: normal;
+}
+
+option {
+  width: 100%;
+  padding: 20px;
+  border-right: 0.5px solid rgb(145, 145, 145);
+  background: rgb(239 239 239);
+  text-align: center;
+}
+
+select[multiple]:focus option:checked,
+option:hover {
+  background: linear-gradient(
+    0deg,
+    rgb(219, 219, 219) 0%,
+    rgb(219, 219, 219) 100%
+  );
+  cursor: pointer;
+}
+
+option::before {
+  display: none;
+}
+
+.operatorsSelect option:first-child,
+.numbersSelect option:first-child {
+  border-left: 0.5px solid rgb(145, 145, 145);
+}
+
+.start-button {
+  width: 100%;
+  padding: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    rgb(252, 176, 69, 1) 0%,
+    rgb(223, 133, 8) 100%
+  );
+  color: white;
+}
+
+.instructions {
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.instructions p {
+  margin: 0.5px;
+  font-size: 11px;
+}
+
+.calculator {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(90px, auto) repeat(5, 70px);
+  grid-gap: 1px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: rgb(145, 145, 145);
+}
+
+.col-2 {
+  grid-column: span 2;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  grid-column: 1 / -1;
+  min-height: 70px;
+  padding: 10px;
+  background: linear-gradient(90deg, rgb(49, 49, 49) 0%, rgb(29, 29, 29) 100%);
+  color: white;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.previous-result {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: opacity ease-in-out 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.operator,
+.clear {
+  background: rgb(201, 201, 201);
+}
+
+.equals {
+  background: linear-gradient(
+    90deg,
+    rgb(252, 176, 69, 1) 0%,
+    rgb(223, 133, 8) 100%
+  );
+}
+
+.home-button {
+  display: none;
+  padding: 10px 20px;
+  margin: 15px;
+  border: 0.5px solid white;
+  border-radius: 15px;
+  font-size: 14px;
+  transition: all 0.15s ease-out;
+}
+
+.home-button:hover {
+  border: 0.5px solid rgb(29, 29, 29);
+  background: rgb(29, 29, 29);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .start-panel label {
+    padding: 10px 0px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  select {
+    overflow: auto;
+  }
+
+  optgroup {
+    flex-direction: column;
+    padding: 0;
+    border: none;
+    background: white;
+  }
+
+  .operatorsSelect option:first-child,
+  .numbersSelect option:first-child {
+    border-left: none;
+  }
+
+  option {
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-bottom: 0.5px solid rgb(201, 201, 201);
+  }
+
+  .calculator {
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: minmax(50px, auto) repeat(5, 50px);
+  }
+}

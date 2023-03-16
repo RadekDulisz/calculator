@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="start-panel">
+    <label>Select which buttons you wish to appear on the calculator</label>
+    <select name="buttons" size="2" multiple="true" class="allowedButtonsSelect">
+      <optgroup label="numbers&nbsp;&nbsp;&nbsp;&nbsp;" class="numbersSelect">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>0</option>
+      </optgroup>
+      <optgroup label="operators&nbsp;&nbsp;&nbsp;" class="operatorsSelect">
+        <option>n!</option>
+        <option>^</option>
+        <option>÷</option>
+        <option>×</option>
+        <option>-</option>
+        <option>+</option>
+        <option>.</option>
+      </optgroup>
+    </select>
+    <button type="button" class="start-button">Start</button>
+    <div class="instructions">
+      <p>Instructions:</p>
+      <p>CLICK + HOLD then drag to select multiple buttons at once.</p>
+      <p>CLICK then HOLD SHIFT and CLICK again to select the range of buttons you wish to use.</p>
+      <p>CLICK then HOLD CTRL and CLICK again to select buttons one by one.</p>
+      <p>After you select the buttons CLICK start.</p>
+    </div>
+  </div>
+  <div class="calculator">
+    <div class="result">
+      <div class="previous-result"></div>
+      <div class="current-result"></div>
+    </div>
+    <button type="button" class="clear">C</button>
+    <button type="button" class="operator">n!</button>
+    <button type="button" class="operator">^</button>
+    <button type="button" class="operator">&divide;</button>
+
+    <button type="button" class="number">7</button>
+    <button type="button" class="number">8</button>
+    <button type="button" class="number">9</button>
+    <button type="button" class="operator">&times;</button>
+    
+    <button type="button" class="number">4</button>
+    <button type="button" class="number">5</button>
+    <button type="button" class="number">6</button>
+    <button type="button" class="operator">-</button>
+    
+    <button type="button" class="number">1</button>
+    <button type="button" class="number">2</button>
+    <button type="button" class="number">3</button>
+    <button type="button" class="operator">+</button>
+
+    <button type="button" class="number">.</button>  
+    <button type="button" class="number">0</button>
+    <button type="button" class="equals col-2">=</button>
+  </div>
+  <div class="home-button">Home</div>
+  <script src="js/calculator.js"></script>
+</body>
+</html>
