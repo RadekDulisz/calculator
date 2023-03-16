@@ -1,7 +1,7 @@
 # Calculator
-###### Demo: [LINK](cheery-beignet-997a92.netlify.app)
 
 This is a customizable calculator that I made in JavaScript to practice my skills.
+## Demo: [LINK](cheery-beignet-997a92.netlify.app)
 
 ![image](https://user-images.githubusercontent.com/27691628/225562824-be8e01a7-4cfb-4443-92e7-6da4e42d511a.png)
 
@@ -28,6 +28,5 @@ Running this project locally
 
 1. Clone this project locally
 2. Run `npm install` in your bash/command line
-3. Run `npm run` in your bash/command line
-4. Run `npm run` in your bash/command line
-5. Go to `http://localhost:3000` in your browser (or other from your bash/command line info).
+3. Run `npm run dev` in your bash/command line
+4. Go to `http://localhost:3000` in your browser (or other from your bash/command line info).
