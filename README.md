@@ -1,7 +1,7 @@
 # Calculator
 
 This is a customizable calculator that I made in JavaScript to practice my skills.
-## Demo: [LINK](cheery-beignet-997a92.netlify.app)
+## Demo: [LINK](https://cheery-beignet-997a92.netlify.app)
 
 ![image](https://user-images.githubusercontent.com/27691628/225562824-be8e01a7-4cfb-4443-92e7-6da4e42d511a.png)
 
